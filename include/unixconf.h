@@ -32,8 +32,6 @@
 
 
 /* define any of the following that are appropriate */
-#define EMSCRIPTEN 
-
 #define SVR4		/* use in addition to SYSV for System V Release 4 */
 			/* including Solaris 2+ */
 #define NETWORK		/* if running on a networked system */
@@ -60,7 +58,7 @@
 			/* and/or X11 color */
 #define POSIX_JOB_CONTROL /* use System V / Solaris 2.x / POSIX job control */
 			/* (e.g., VSUSP) */
-#define POSIX_TYPES	/* use POSIX types for system calls and termios */
+#define POSIX_TYPES 	/* use POSIX types for system calls and termios */
 			/* Define for many recent OS releases, including
 			 * those with specific defines (since types are
 			 * changing toward the standard from earlier chaos).

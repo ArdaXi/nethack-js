@@ -78,7 +78,7 @@
 # endif /* POSIX_TYPES */
 #  define GTTY2(x)	1
 #  define STTY2(x)	1
-# ifdef POSIX_TYPES
+# if defined(POSIX_TYPES) && !defined(EMSCRIPTEN)
 #  if defined(BSD) && !defined(__DGUX__)
 #   define nonesuch	_POSIX_VDISABLE
 #  else
