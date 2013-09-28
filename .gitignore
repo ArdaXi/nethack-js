@@ -1,0 +1,5 @@
+*.o
+makedefs
+*.js
+*.js.map
+*.bc
