@@ -53,7 +53,7 @@
 # define cbrkflgs	c_lflag
 # define CBRKMASK	ICANON
 # define CBRKON		! /* reverse condition */
-# ifdef POSIX_TYPES
+# if defined(POSIX_TYPES) && !defined(EMSCRIPTEN)
 #  define OSPEED(x)	(speednum(cfgetospeed(&x)))
 # else
 #  ifndef CBAUD
@@ -78,7 +78,7 @@
 # endif /* POSIX_TYPES */
 #  define GTTY2(x)	1
 #  define STTY2(x)	1
-# if defined(POSIX_TYPES) && !defined(EMSCRIPTEN)
+# ifdef POSIX_TYPES
 #  if defined(BSD) && !defined(__DGUX__)
 #   define nonesuch	_POSIX_VDISABLE
 #  else
