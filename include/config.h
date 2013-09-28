@@ -196,7 +196,7 @@
 /* #define INSURANCE	*/ /* allow crashed game recovery */
 
 #ifndef MAC
-/* # define CHDIR	*/	/* delete if no chdir() available */
+ # define CHDIR		/* delete if no chdir() available */
 #endif
 
 #ifdef CHDIR

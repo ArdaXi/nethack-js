@@ -32,6 +32,8 @@
 
 
 /* define any of the following that are appropriate */
+#define EMSCRIPTEN 
+
 #define SVR4		/* use in addition to SYSV for System V Release 4 */
 			/* including Solaris 2+ */
 #define NETWORK		/* if running on a networked system */
