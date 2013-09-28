@@ -3,3 +3,4 @@ makedefs
 *.js
 *.js.map
 *.bc
+include/date.h
