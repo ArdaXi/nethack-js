@@ -3,4 +3,13 @@ makedefs
 *.js
 *.js.map
 *.bc
+dat/options
 include/date.h
+include/onames.h
+include/pm.h
+include/vis_tab.h
+src/Sysunix
+src/config.h-t
+src/hack.h-t
+src/monstr.c
+src/vis_tab.c
