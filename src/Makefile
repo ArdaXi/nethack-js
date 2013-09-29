@@ -44,7 +44,7 @@ LINK=$(CC)
 # for UNIX systems
 SYSSRC = ../sys/share/ioctl.c ../sys/share/unixtty.c ../sys/unix/unixmain.c \
 	../sys/unix/unixunix.c ../sys/unix/unixres.c
-SYSOBJ = ioctl.o unixmain.o unixtty.o unixunix.o unixres.o
+SYSOBJ = ioctl.o unixmain.o unixtty.o unixunix.o unixres.o tclib.o
 #
 # for Systos
 # SYSSRC = ../sys/atari/tos.c ../sys/share/pcmain.c ../sys/share/pcsys.c \
@@ -230,8 +230,8 @@ WINOBJ = $(WINTTYOBJ)
 # WINTTYLIB = -ltermcap
 # WINTTYLIB = -lcurses
 # WINTTYLIB = -lcurses16
-# WINTTYLIB = -lncurses
-WINTTYLIB = -ltermlib
+WINTTYLIB = -lncurses
+#WINTTYLIB = -ltermlib
 #
 # libraries for X11
 # If USE_XPM is defined in config.h, you will also need -lXpm here.
@@ -594,6 +594,8 @@ unixunix.o: ../sys/unix/unixunix.c $(HACK_H)
 	$(CC) $(CFLAGS) -c ../sys/unix/unixunix.c
 unixres.o: ../sys/unix/unixres.c $(CONFIG_H)
 	$(CC) $(CFLAGS) -c ../sys/unix/unixres.c
+tclib.o: ../sys/share/tclib.c $(HACK_H)
+	$(CC) $(CFLAGS) -c ../sys/share/tclib.c
 bemain.o: ../sys/be/bemain.c $(HACK_H) ../include/dlb.h
 	$(CC) $(CFLAGS) -c ../sys/be/bemain.c
 getline.o: ../win/tty/getline.c $(HACK_H) ../include/func_tab.h
